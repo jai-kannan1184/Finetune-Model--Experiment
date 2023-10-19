@@ -1,0 +1,167 @@
+Here are some suggested hyperparameters for fine-tuning your custom ResNet model on the ImageNet dataset. 
+
+1. Learning Rate: The learning rate is a critical hyperparameter that determines the step size at each iteration while moving towards a minimum of a loss function. A common range for the learning rate is between 0.0001 and 0.1. For fine-tuning, a smaller learning rate like 0.0001 or 0.001 is often used to avoid large updates that could harm the pre-trained weights.
+
+2. Batch Size: The batch size is the number of training examples used in one iteration. For ImageNet, a common batch size is 256, but this depends on the memory of your GPU. You could also use 128 or 64 if memory is a constraint.
+
+3. Number of Epochs: The number of epochs is the number of times the learning algorithm will work through the entire training dataset. For fine-tuning, you might not need many epochs. A range of 10-50 could be a good starting point.
+
+4. Optimizer: Adam and SGD (Stochastic Gradient Descent) with momentum are commonly used optimizers. Adam adapts the learning rate for each weight individually and is less sensitive to hyperparameters. SGD with momentum often achieves better results on larger datasets like ImageNet.
+
+5. Loss Function: The Cross-Entropy loss is commonly used for multi-class classification problems like ImageNet.
+
+6. Scheduler: Learning rate schedulers adjust the learning rate during training. The StepLR scheduler is a good choice, which multiplies the learning rate by a factor (gamma) every few epochs (step size).
+
+7. Step Size: This is the number of epochs after which the learning rate is multiplied by gamma. A common choice could be to reduce the learning rate every 10 epochs.
+
+8. Gamma: This is the factor by which the learning rate is multiplied. A common choice is 0.1.
+
+9. Momentum: This is used with SGD to accelerate convergence. A common choice is 0.9.
+
+Here is the final format:
+
+{
+    "learning_rate": "0.0001-0.1",
+    "batch_size": "64-256",
+    "num_epochs": "10-50",
+    "optimizer": "Adam or SGD",
+    "loss_function": "Cross-Entropy",
+    "scheduler": "StepLR",
+    "step_size": "10",
+    "gamma": "0.1",
+    "momentum": "0.9"
+}
+Here are some suggested hyperparameters for fine-tuning your custom ResNet model on the ImageNet dataset:
+
+1. Learning Rate: This is a critical hyperparameter that determines the step size at each iteration while moving towards a minimum of a loss function. A smaller learning rate could lead to intense training time, whereas a larger learning rate could reach the minimum too fast and bounce around. A good starting point could be 0.001.
+
+2. Batch Size: This is the number of training examples used in one iteration. For a dataset as large as ImageNet, a larger batch size (like 256 or 512) can be used if your hardware supports it.
+
+3. Number of Epochs: This is the number of times the learning algorithm will work through the entire training dataset. You can start with 20-30 epochs and increase if necessary.
+
+4. Optimizer: Adam is a good choice as it combines the best properties of the AdaGrad and RMSProp algorithms to provide an optimization algorithm that can handle sparse gradients on noisy problems.
+
+5. Loss Function: Cross-Entropy loss is suitable for multi-class classification problems like ImageNet.
+
+6. Scheduler: StepLR is a good choice for adjusting the learning rate. It decays the learning rate of each parameter group by gamma every step_size epochs.
+
+7. Step Size: This is the number of epochs after which the learning rate is decayed by the scheduler. You can start with a step size of 10.
+
+8. Gamma: This is the factor by which the learning rate is reduced. You can start with a gamma of 0.1.
+
+9. Momentum: This is used to prevent the optimizer from getting stuck in local optima. A good starting point could be 0.9.
+
+Here is the final format:
+
+{
+    "learning_rate": "0.001",
+    "batch_size": "256",
+    "num_epochs": "30",
+    "optimizer": "Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR",
+    "step_size": "10",
+    "gamma": "0.1",
+    "momentum": "0.9"
+}
+
+Please note that these are just starting points. The optimal hyperparameters can vary depending on the specific characteristics of your model and data. You should use a systematic approach like grid search or random search to find the optimal hyperparameters for your model.
+Here are some suggested hyperparameters for fine-tuning your custom ResNet model on the ImageNet dataset:
+
+1. Learning Rate: This is a critical hyperparameter that determines the step size at each iteration while moving towards a minimum of a loss function. A smaller learning rate could lead to intense training time, whereas a larger learning rate could reach the minimum too fast and bounce around. A good starting point could be 0.001.
+
+2. Batch Size: This is the number of training examples used in one iteration. For a dataset as large as ImageNet, a larger batch size (like 256 or 512) can be used if your hardware supports it.
+
+3. Number of Epochs: This is the number of times the entire dataset is passed forward and backward through the neural network. A good starting point could be 50-100 epochs, but this can be adjusted based on your specific needs and computational resources.
+
+4. Optimizer: Adam is a good choice for an optimizer as it combines the best properties of the AdaGrad and RMSProp algorithms to provide an optimization algorithm that can handle sparse gradients on noisy problems.
+
+5. Loss Function: Cross-Entropy loss is a good choice for multi-class classification problems like ImageNet.
+
+6. Scheduler: The learning rate scheduler adjusts the learning rate during training. The StepLR scheduler is a good choice, which multiplies the learning rate by a factor 'gamma' every 'step_size' number of epochs.
+
+7. Step Size: This is the number of epochs after which the learning rate is multiplied by 'gamma'. A good starting point could be 10.
+
+8. Gamma: This is the factor by which the learning rate is multiplied. A good starting point could be 0.1.
+
+9. Momentum: This is a parameter that accelerates SGD in the relevant direction and dampens oscillations. It can be set to 0.9.
+
+Here is the final format:
+
+{
+    "learning_rate": "0.001",
+    "batch_size": "256",
+    "num_epochs": "50",
+    "optimizer": "Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR",
+    "step_size": "10",
+    "gamma": "0.1",
+    "momentum": "0.9"
+}
+Here are some suggested hyperparameters for fine-tuning your custom ResNet model on the ImageNet dataset:
+
+1. Learning Rate: The learning rate is a critical hyperparameter that determines the step size at each iteration while moving towards a minimum of a loss function. A common range for the learning rate is between 0.0001 and 0.1. For fine-tuning, a smaller learning rate like 0.0001 or 0.001 is often used to avoid large updates that could harm the pre-trained weights.
+
+2. Batch Size: The batch size is the number of training examples used in one iteration. For ImageNet, a common batch size is 256, but this depends on the memory of your GPU. You could also use smaller batch sizes like 32, 64, or 128.
+
+3. Number of Epochs: The number of epochs is the number of times the learning algorithm will work through the entire training dataset. For fine-tuning, you might not need many epochs. A range of 10-100 could work, but this depends on how quickly your model converges.
+
+4. Optimizer: Adam and SGD (Stochastic Gradient Descent) with momentum are commonly used optimizers. Adam adapts the learning rate for each weight and is less sensitive to hyperparameters. SGD with momentum combines the advantages of momentum and stochastic gradient descent.
+
+5. Loss Function: For multi-class classification problems like ImageNet, Cross-Entropy Loss is commonly used.
+
+6. Scheduler: Learning rate schedulers adjust the learning rate during training. The StepLR scheduler is commonly used, which decays the learning rate by gamma every step_size epochs.
+
+7. Step Size: This is the number of epochs after which the learning rate is decayed by the scheduler. A common choice could be to decay the learning rate every 30-50 epochs.
+
+8. Gamma: This is the factor by which the learning rate is decayed by the scheduler. A common choice is 0.1.
+
+9. Momentum: This is used with SGD to accelerate gradients vectors in the right directions, thus leading to faster converging. A common choice is 0.9.
+
+Here is the final format:
+
+{
+    "learning_rate": "0.0001-0.1",
+    "batch_size": "32-256",
+    "num_epochs": "10-100",
+    "optimizer": "Adam or SGD",
+    "loss_function": "Cross-Entropy Loss",
+    "scheduler": "StepLR",
+    "step_size": "30-50",
+    "gamma": "0.1",
+    "momentum": "0.9"
+}
+Here are some suggested hyperparameters for fine-tuning your custom ResNet model on the ImageNet dataset:
+
+1. Learning Rate: The learning rate is a critical hyperparameter that determines the step size at each iteration while moving towards a minimum of a loss function. A smaller learning rate requires more training epochs given the smaller steps in the weight updates, whereas a larger learning rate covers more in the weight space with fewer training epochs but may not converge to the optimal weight configuration. A good starting point could be 0.001.
+
+2. Batch Size: The batch size defines the number of samples that will be propagated through the network. For example, let's say you have 1050 training samples and you set your batch size equal to 100. The algorithm takes the first 100 samples (from 1st to 100th) from the training dataset and trains the network. Next, it takes the second 100 samples (from 101st to 200th) and trains the network again. We can keep doing this procedure until we have propagated all samples through the network. A good starting point could be 32 or 64.
+
+3. Number of Epochs: The number of epochs is a hyperparameter that defines the number of times the learning algorithm will work through the entire training dataset. A good starting point could be 50.
+
+4. Optimizer: Adam is a good choice for an optimizer as it combines the best properties of the AdaGrad and RMSProp algorithms to provide an optimization algorithm that can handle sparse gradients on noisy problems.
+
+5. Loss Function: Cross-Entropy loss is a good choice for multi-class classification problems like ImageNet.
+
+6. Scheduler: The learning rate scheduler adjusts the learning rate during training. The StepLR scheduler is a good choice, which multiplies the learning rate by a factor every few epochs.
+
+7. Step Size: This is the number of epochs before the learning rate drops (in StepLR). A good starting point could be 10.
+
+8. Gamma: This is the factor by which the learning rate decreases. A good starting point could be 0.1.
+
+9. Momentum: Momentum helps accelerate gradients vectors in the right directions, thus leading to faster converging. A good starting point could be 0.9.
+
+Here is the final format:
+
+{
+    "learning_rate": "0.001",
+    "batch_size": "64",
+    "num_epochs": "50",
+    "optimizer": "Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR",
+    "step_size": "10",
+    "gamma": "0.1",
+    "momentum": "0.9"
+}

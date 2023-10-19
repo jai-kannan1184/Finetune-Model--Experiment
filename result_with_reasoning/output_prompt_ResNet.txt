@@ -1,0 +1,159 @@
+{
+    "learning_rate": "0.001 - 0.1",
+    "batch_size": "16 - 128",
+    "num_epochs": "10 - 100",
+    "optimiser": "SGD, Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR, ReduceLROnPlateau",
+    "step_size": "5 - 30",
+    "gamma": "0.1 - 0.9",
+    "momentum": "0.5 - 0.99"
+}
+
+Reasoning:
+
+1. "learning_rate": The learning rate is a hyperparameter that controls how much to change the model in response to the estimated error each time the model weights are updated. Choosing the learning rate is challenging as a value too small may result in a long training process that could get stuck, whereas a value too large may result in learning a sub-optimal set of weights too fast or an unstable training process.
+
+2. "batch_size": The batch size is a hyperparameter that defines the number of samples to work through before updating the internal model parameters. A smaller batch size requires less memory to run, but the gradient estimate will be less accurate. On the other hand, a larger batch size will give a more accurate gradient estimate but will require more memory.
+
+3. "num_epochs": The number of epochs is a hyperparameter that defines the number times that the learning algorithm will work through the entire training dataset. One epoch means that each sample in the training dataset has had an opportunity to update the internal model parameters. An epoch is comprised of one or more batches.
+
+4. "optimiser": The optimizer is the algorithm used to update the weights of the model in response to the error calculated by the loss function. SGD and Adam are popular choices.
+
+5. "loss_function": The loss function, or cost function, is a method of evaluating how well your algorithm models your dataset. If your predictions are totally off, your loss function will output a higher number. If they’re pretty good, it’ll output a lower number. CrossEntropyLoss is commonly used for multi-class classification problems.
+
+6. "scheduler": Learning rate scheduler adjusts the learning rate based on the number of epochs. StepLR and ReduceLROnPlateau are commonly used schedulers.
+
+7. "step_size": This is used in StepLR scheduler. It is the period for the learning rate decay.
+
+8. "gamma": This is used in learning rate schedulers like StepLR. It is the factor by which the learning rate gets multiplied at each step.
+
+9. "momentum": Momentum helps accelerate gradients vectors in the right directions, thus leading to faster converging. It is one of the most popular optimization algorithms and many state-of-the-art models are trained using it.
+Here are some suggested hyperparameters for fine-tuning your custom ResNet model on the ImageNet dataset. 
+
+1. Learning Rate: The learning rate is a critical hyperparameter that determines the step size at each iteration while moving towards a minimum of a loss function. A smaller learning rate could lead to intense training time, whereas a larger learning rate could reach the minimum too fast and bounce around. A good starting point could be 0.001.
+
+2. Batch Size: The batch size defines the number of samples that will be propagated through the network simultaneously. A smaller batch size uses less memory and makes the model able to train on smaller GPUs. A larger batch size makes the training more stable. A good starting point could be 32 or 64.
+
+3. Number of Epochs: The number of epochs is the number of times the entire dataset is passed forward and backward through the neural network. A good starting point could be 50 epochs, but this could be increased if the model performance continues to improve without overfitting.
+
+4. Optimizer: Adam is a good choice for an optimizer as it combines the best properties of the AdaGrad and RMSProp algorithms to provide an optimization algorithm that can handle sparse gradients on noisy problems.
+
+5. Loss Function: Cross-Entropy loss is a good choice for multi-class classification problems like ImageNet.
+
+6. Scheduler: The learning rate scheduler adjusts the learning rate during training. The StepLR scheduler is a good choice, which multiplies the learning rate by a factor every few epochs.
+
+7. Step Size: The step size is the number of epochs before the learning rate drops in the StepLR scheduler. A good starting point could be 10.
+
+8. Gamma: The gamma is the factor by which the learning rate gets multiplied at each step in the StepLR scheduler. A good starting point could be 0.1.
+
+9. Momentum: Momentum helps accelerate the gradient vectors in the right directions, leading to faster converging. A good starting point could be 0.9.
+
+Here is the final format:
+
+{
+    "learning_rate": "0.001",
+    "batch_size": "32",
+    "num_epochs": "50",
+    "optimizer": "Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR",
+    "step_size": "10",
+    "gamma": "0.1",
+    "momentum": "0.9"
+}
+{
+    "learning_rate": "0.001 - 0.1",
+    "batch_size": "16 - 128",
+    "num_epochs": "10 - 100",
+    "optimiser": "SGD, Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR, ReduceLROnPlateau",
+    "step_size": "5 - 30",
+    "gamma": "0.1 - 0.9",
+    "momentum": "0.5 - 0.99"
+}
+
+Reasoning:
+
+1. "learning_rate": The learning rate is a hyperparameter that controls how much to change the model in response to the estimated error each time the model weights are updated. Choosing the learning rate is challenging as a value too small may result in a long training process that could get stuck, whereas a value too large may result in learning a sub-optimal set of weights too fast or an unstable training process.
+
+2. "batch_size": The batch size is a hyperparameter that defines the number of samples to work through before updating the internal model parameters. A smaller batch size of 16-64 might be preferable here, as it can make the model training process more robust and less likely to result in local minima during optimization.
+
+3. "num_epochs": The number of epochs is a hyperparameter that defines the number times that the learning algorithm will work through the entire training dataset. The number of epochs can be set to a fixed number (like 10-100) but it's better to use a technique like early stopping to have a more flexible number of epochs.
+
+4. "optimiser": SGD and Adam are both popular choices for optimizers in deep learning models. SGD is more traditional and has been around for a while while Adam is more recent and often provides better performance.
+
+5. "loss_function": CrossEntropyLoss is a good choice for multi-class classification problems like ImageNet.
+
+6. "scheduler": Learning rate schedulers can adjust the learning rate during training. StepLR adjusts the learning rate every step_size epochs by gamma. ReduceLROnPlateau reduces the learning rate when a metric has stopped improving.
+
+7. "step_size": This is the number of epochs before the learning rate drops (in StepLR). The optimal value can vary widely and should be tuned for your specific use case.
+
+8. "gamma": This is the factor by which the learning rate decreases in the scheduler. A common choice is 0.1, but it can be tuned.
+
+9. "momentum": Momentum helps accelerate SGD in the relevant direction and dampens oscillations. It can be set between 0 (high friction) and 1 (no friction).
+{
+    "learning_rate": "0.001 - 0.1",
+    "batch_size": "16 - 128",
+    "num_epochs": "10 - 100",
+    "optimiser": "SGD, Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR, ReduceLROnPlateau",
+    "step_size": "5 - 30",
+    "gamma": "0.1 - 0.9",
+    "momentum": "0.5 - 0.99"
+}
+
+Reasoning:
+
+1. "learning_rate": The learning rate is a hyperparameter that controls how much to change the model in response to the estimated error each time the model weights are updated. Choosing the learning rate is challenging as a value too small may result in a long training process that could get stuck, whereas a value too large may result in learning a sub-optimal set of weights too fast or an unstable training process.
+
+2. "batch_size": The batch size is a hyperparameter that defines the number of samples to work through before updating the internal model parameters. A smaller batch size of 16-64 might enable the model to start learning before it has seen all the data, but larger batch sizes of 64-128 can result in faster training.
+
+3. "num_epochs": The number of epochs is a hyperparameter that defines the number times that the learning algorithm will work through the entire training dataset. The number of epochs can be set to a fixed number (like 10-100), but it’s common to use a large number and stop the training process once the model performance stops improving on a hold out validation dataset.
+
+4. "optimiser": SGD and Adam are popular choices for optimizers. SGD is more traditional and has been around for a long time while Adam is more recent and often outperforms SGD.
+
+5. "loss_function": CrossEntropyLoss is a good choice for multi-class classification problems like ImageNet.
+
+6. "scheduler": Learning rate schedulers like StepLR and ReduceLROnPlateau can be used to adjust the learning rate during training by reducing it according to a pre-defined schedule, which can result in improved performance and reduced training time.
+
+7. "step_size": This is the number of epochs after which the learning rate is decreased in StepLR. A smaller step size will reduce the learning rate more frequently.
+
+8. "gamma": This is the factor by which the learning rate is reduced at each step. A high gamma will reduce the learning rate significantly at each step, which can help to fine-tune the model in the later stages of training.
+
+9. "momentum": Momentum helps accelerate SGD in the relevant direction and dampens oscillations. It does this by adding a fraction of the update vector of the past time step to the current update vector.
+Here are some suggested hyperparameter ranges for fine-tuning your custom ResNet model on the ImageNet dataset. The ranges are based on common practices and previous successful experiments with similar models and datasets.
+
+1. "learning_rate": The learning rate is one of the most important hyperparameters. It determines how much the weights of the network will change in each update. A common range for the learning rate is between 0.0001 and 0.1. You can start with a learning rate of 0.01 and decrease it if the training process does not converge.
+
+2. "batch_size": The batch size determines how many samples the model should take in one update. A common range for the batch size is between 16 and 128. You can start with a batch size of 32 or 64.
+
+3. "num_epochs": The number of epochs is the number of times the entire dataset is passed forward and backward through the neural network. A common range for the number of epochs is between 10 and 100. You can start with 20 epochs and increase it if necessary.
+
+4. "optimizer": The optimizer is the algorithm used to update the weights of the network. Common choices are SGD (Stochastic Gradient Descent), Adam, and RMSprop. You can start with SGD as it is commonly used in ResNet models.
+
+5. "loss_function": The loss function is used to measure the difference between the network's prediction and the actual value. For multi-class classification problems like ImageNet, Cross-Entropy Loss is commonly used.
+
+6. "scheduler": The learning rate scheduler adjusts the learning rate during training. Common choices are StepLR, which reduces the learning rate by a factor every few epochs, and ReduceLROnPlateau, which reduces the learning rate when the validation loss plateaus. You can start with StepLR.
+
+7. "step_size": The step size is the number of epochs before the learning rate drops in the StepLR scheduler. A common range is between 5 and 20. You can start with a step size of 10.
+
+8. "gamma": The gamma is the factor by which the learning rate is reduced in the StepLR scheduler. A common range is between 0.1 and 1. You can start with a gamma of 0.1.
+
+9. "momentum": The momentum is a hyperparameter used in SGD to accelerate convergence. A common range is between 0.5 and 0.99. You can start with a momentum of 0.9.
+
+Here is the final format:
+
+{
+    "learning_rate": "0.01",
+    "batch_size": "64",
+    "num_epochs": "20",
+    "optimizer": "SGD",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR",
+    "step_size": "10",
+    "gamma": "0.1",
+    "momentum": "0.9"
+}

@@ -1,0 +1,230 @@
+Training:
+{
+    "learning_rate": "0.01 to 0.1", 
+    "batch_size": "16 to 128", 
+    "num_epochs": "20 to 100", 
+    "optimiser": "SGD or Adam", 
+    "loss_function": "CrossEntropyLoss", 
+    "scheduler": "StepLR or ReduceLROnPlateau", 
+    "step_size": "5 to 10", 
+    "gamma": "0.1 to 0.5", 
+    "momentum": "0.9 to 0.99"    
+}
+
+Fine-Tuning:
+{
+    "learning_rate": "0.0001 to 0.001", 
+    "batch_size": "16 to 128", 
+    "num_epochs": "10 to 50", 
+    "optimiser": "SGD or Adam", 
+    "loss_function": "CrossEntropyLoss", 
+    "scheduler": "StepLR or ReduceLROnPlateau", 
+    "step_size": "5 to 10", 
+    "gamma": "0.1 to 0.5", 
+    "momentum": "0.9 to 0.99"    
+}
+
+Reasoning:
+
+1. Learning Rate: A higher learning rate (0.01 to 0.1) is used during training to allow the model to learn quickly. During fine-tuning, a lower learning rate (0.0001 to 0.001) is used to make smaller adjustments to the model weights.
+
+2. Batch Size: A batch size between 16 to 128 is common. Larger batch sizes allow the model to process more data at once, but also require more memory.
+
+3. Number of Epochs: During training, a larger number of epochs (20 to 100) is used to allow the model to learn from the data. During fine-tuning, fewer epochs (10 to 50) are needed as the model has already been pre-trained.
+
+4. Optimiser: SGD and Adam are commonly used optimisers. SGD is simple and efficient, while Adam adapts the learning rate for each weight in the model, which can lead to faster convergence.
+
+5. Loss Function: CrossEntropyLoss is commonly used for multi-class classification problems like ImageNet.
+
+6. Scheduler: StepLR and ReduceLROnPlateau are learning rate schedulers that adjust the learning rate during training. StepLR reduces the learning rate every few epochs, while ReduceLROnPlateau reduces the learning rate when the model's performance plateaus.
+
+7. Step Size: This is the number of epochs before the learning rate is decreased, typically between 5 to 10 epochs.
+
+8. Gamma: This is the factor by which the learning rate is reduced. A common range is 0.1 to 0.5.
+
+9. Momentum: This is a parameter for the SGD optimiser that helps accelerate SGD in the relevant direction and dampens oscillations. A common range is 0.9 to 0.99.
+Could not decode the completion as JSON.
+Training:
+{
+    "learning_rate": "0.01 to 0.1", 
+    "batch_size": "16 to 128", 
+    "num_epochs": "20 to 100", 
+    "optimiser": "SGD or Adam", 
+    "loss_function": "CrossEntropyLoss", 
+    "scheduler": "StepLR or ReduceLROnPlateau", 
+    "step_size": "5 to 10", 
+    "gamma": "0.1 to 0.5", 
+    "momentum": "0.9 to 0.99"    
+}
+
+Fine-Tuning:
+{
+    "learning_rate": "0.0001 to 0.001", 
+    "batch_size": "16 to 128", 
+    "num_epochs": "10 to 50", 
+    "optimiser": "SGD or Adam", 
+    "loss_function": "CrossEntropyLoss", 
+    "scheduler": "StepLR or ReduceLROnPlateau", 
+    "step_size": "5 to 10", 
+    "gamma": "0.1 to 0.5", 
+    "momentum": "0.9 to 0.99"    
+}
+
+Reasoning:
+
+1. Learning Rate: A smaller learning rate is used for fine-tuning because we don't want to make large changes to the pre-trained weights. 
+
+2. Batch Size: A smaller batch size can help to regularize the model and prevent overfitting. However, it can also slow down training. A larger batch size can speed up training but may also cause the model to converge to a sub-optimal solution.
+
+3. Number of Epochs: More epochs are needed for training from scratch than for fine-tuning. 
+
+4. Optimizer: SGD and Adam are commonly used optimizers. Adam adapts the learning rate for each weight individually and is generally easier to use. SGD with momentum can sometimes outperform Adam, but it requires careful tuning of the learning rate and momentum.
+
+5. Loss Function: CrossEntropyLoss is commonly used for multi-class classification problems like ImageNet.
+
+6. Scheduler: A learning rate scheduler can help to adjust the learning rate during training. StepLR reduces the learning rate by a factor every few epochs. ReduceLROnPlateau reduces the learning rate when the validation loss has stopped improving.
+
+7. Step Size: This is the number of epochs before the learning rate is reduced. It should be set based on how quickly you expect the model to converge.
+
+8. Gamma: This is the factor by which the learning rate is reduced. A smaller gamma will result in a smaller reduction in learning rate.
+
+9. Momentum: Momentum helps to accelerate SGD in the relevant direction and dampens oscillations. It can be set to a high value like 0.9 or 0.99 for better performance.
+Could not decode the completion as JSON.
+Training:
+{
+    "learning_rate": "0.01 to 0.001", 
+    "batch_size": "16 to 128", 
+    "num_epochs": "20 to 100", 
+    "optimiser": "SGD or Adam", 
+    "loss_function": "CrossEntropyLoss", 
+    "scheduler": "StepLR or ReduceLROnPlateau", 
+    "step_size": "5 to 10", 
+    "gamma": "0.1 to 0.5", 
+    "momentum": "0.9 to 0.99"    
+}
+
+Fine-Tuning:
+{
+    "learning_rate": "0.0001 to 0.001", 
+    "batch_size": "16 to 128", 
+    "num_epochs": "10 to 50", 
+    "optimiser": "SGD or Adam", 
+    "loss_function": "CrossEntropyLoss", 
+    "scheduler": "StepLR or ReduceLROnPlateau", 
+    "step_size": "5 to 10", 
+    "gamma": "0.1 to 0.5", 
+    "momentum": "0.9 to 0.99"    
+}
+
+Reasoning:
+
+1. Learning Rate: A smaller learning rate is used for fine-tuning because we don't want to make large changes to the weights. We want to make small adjustments to the pre-trained model.
+
+2. Batch Size: A smaller batch size means that the model will update its weights more frequently, which can lead to a more robust model. However, it also means that training will take longer.
+
+3. Number of Epochs: More epochs might lead to better performance but also risk overfitting. In fine-tuning, we usually don't need as many epochs as in training from scratch.
+
+4. Optimizer: SGD and Adam are commonly used. Adam adapts the learning rate for each weight individually and is less sensitive to initial learning rate.
+
+5. Loss Function: CrossEntropyLoss is used for multi-class classification problems like ImageNet.
+
+6. Scheduler: Learning rate scheduler adjusts the learning rate during training. StepLR reduces the learning rate by gamma every step_size epochs. ReduceLROnPlateau reduces the learning rate when a metric has stopped improving.
+
+7. Step Size: This is the number of epochs before the learning rate drops in StepLR scheduler.
+
+8. Gamma: This is the factor by which the learning rate decreases.
+
+9. Momentum: This is used to prevent the optimizer from getting stuck in local minima and to speed up training.
+Could not decode the completion as JSON.
+Training:
+{
+    "learning_rate": "0.01 to 0.001", 
+    "batch_size": "16 to 128", 
+    "num_epochs": "20 to 100", 
+    "optimiser": "SGD or Adam", 
+    "loss_function": "CrossEntropyLoss", 
+    "scheduler": "StepLR or ReduceLROnPlateau", 
+    "step_size": "5 to 10", 
+    "gamma": "0.1 to 0.5", 
+    "momentum": "0.9 to 0.99"    
+}
+
+Fine-Tuning:
+{
+    "learning_rate": "0.0001 to 0.001", 
+    "batch_size": "16 to 128", 
+    "num_epochs": "10 to 50", 
+    "optimiser": "SGD or Adam", 
+    "loss_function": "CrossEntropyLoss", 
+    "scheduler": "StepLR or ReduceLROnPlateau", 
+    "step_size": "5 to 10", 
+    "gamma": "0.1 to 0.5", 
+    "momentum": "0.9 to 0.99"    
+}
+
+Reasoning:
+
+1. Learning Rate: A smaller learning rate is used for fine-tuning because we don't want to make large changes to the weights. We want to make small adjustments to the pre-trained model.
+
+2. Batch Size: A smaller batch size means that the model will update its weights more frequently, which can lead to a more robust model. However, it also means that training will take longer.
+
+3. Number of Epochs: More epochs might lead to better performance but also risk overfitting. In fine-tuning, we usually don't need as many epochs as in training from scratch.
+
+4. Optimizer: SGD and Adam are both popular choices. Adam is usually easier to tune but SGD can achieve better performance with the right hyperparameters.
+
+5. Loss Function: CrossEntropyLoss is a common choice for multi-class classification problems like ImageNet.
+
+6. Scheduler: Learning rate schedulers can help adjust the learning rate during training to achieve better performance. StepLR reduces the learning rate by a factor every few epochs. ReduceLROnPlateau reduces the learning rate when the validation loss has stopped improving.
+
+7. Step Size: This is related to the learning rate scheduler. A smaller step size means the learning rate will be reduced more frequently.
+
+8. Gamma: This is the factor by which the learning rate is reduced. A smaller gamma means a smaller reduction.
+
+9. Momentum: Momentum helps accelerate SGD in the relevant direction and dampens oscillations. It's usually set close to 1.
+Could not decode the completion as JSON.
+Training:
+{
+    "learning_rate": "0.01 to 0.001", 
+    "batch_size": "16 to 128", 
+    "num_epochs": "20 to 100", 
+    "optimiser": "SGD or Adam", 
+    "loss_function": "CrossEntropyLoss", 
+    "scheduler": "StepLR or ReduceLROnPlateau", 
+    "step_size": "5 to 10", 
+    "gamma": "0.1 to 0.5", 
+    "momentum": "0.9 to 0.99"
+}
+
+Fine-Tuning:
+{
+    "learning_rate": "0.0001 to 0.001", 
+    "batch_size": "16 to 128", 
+    "num_epochs": "10 to 50", 
+    "optimiser": "SGD or Adam", 
+    "loss_function": "CrossEntropyLoss", 
+    "scheduler": "StepLR or ReduceLROnPlateau", 
+    "step_size": "5 to 10", 
+    "gamma": "0.1 to 0.5", 
+    "momentum": "0.9 to 0.99"
+}
+
+Reasoning:
+
+1. Learning Rate: A smaller learning rate is used for fine-tuning because we don't want to make large changes to the weights. We want to make small adjustments to the pre-trained model.
+
+2. Batch Size: A smaller batch size means that the model will update its weights more frequently, which can lead to a more robust model. However, it also means that training will take longer.
+
+3. Number of Epochs: More epochs might lead to better performance but also risk overfitting. In fine-tuning, we usually don't need as many epochs as in training from scratch.
+
+4. Optimizer: SGD and Adam are commonly used. Adam adjusts the learning rate adaptively for each parameter which can be beneficial when fine-tuning.
+
+5. Loss Function: CrossEntropyLoss is commonly used for multi-class classification problems like ImageNet.
+
+6. Scheduler: Learning rate schedulers gradually decrease the learning rate during training, which can help the model converge. StepLR reduces the learning rate by gamma every step_size epochs. ReduceLROnPlateau reduces the learning rate when a metric has stopped improving.
+
+7. Step Size: This is the number of epochs before the learning rate drops in StepLR. A smaller step size means the learning rate will decrease more frequently.
+
+8. Gamma: This is the factor by which the learning rate decreases in StepLR. A smaller gamma means a smaller decrease in learning rate.
+
+9. Momentum: Momentum helps accelerate SGD in the relevant direction and dampens oscillations. It's usually set close to 1.
+Could not decode the completion as JSON.

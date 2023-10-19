@@ -1,0 +1,163 @@
+Here are some suggested hyperparameters for fine-tuning your custom model on the ImageNet dataset. The exact values may need to be adjusted based on the specific characteristics of your data and the performance of the model during training.
+
+{
+    "learning_rate": "0.001 - 0.01",
+    "batch_size": "16 - 128",
+    "num_epochs": "20 - 100",
+    "optimiser": "SGD, Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR",
+    "step_size": "5 - 10",
+    "gamma": "0.1 - 0.5",
+    "momentum": "0.9"
+}
+
+Reasoning:
+
+- Learning rate: A common range for the learning rate is between 0.001 and 0.01. A smaller learning rate may lead to more accurate results, but the training process will be slower.
+
+- Batch size: The batch size depends on the available memory. A larger batch size can lead to faster training, but it may also cause the model to converge to a suboptimal solution.
+
+- Number of epochs: The number of epochs depends on how quickly the model converges. A larger number of epochs may lead to better results, but it will also increase the training time.
+
+- Optimizer: SGD and Adam are commonly used optimizers. SGD is simple and efficient, while Adam adapts the learning rate for each weight in the model, which can lead to faster convergence.
+
+- Loss function: CrossEntropyLoss is commonly used for multi-class classification problems like ImageNet.
+
+- Scheduler: StepLR is a simple learning rate scheduler that decreases the learning rate by a factor (gamma) every few epochs (step_size). This can help the model converge faster.
+
+- Step size: The step size for the learning rate scheduler depends on how quickly you want the learning rate to decrease. A smaller step size means the learning rate will decrease more frequently.
+
+- Gamma: The gamma for the learning rate scheduler is the factor by which the learning rate decreases. A smaller gamma means a slower decrease.
+
+- Momentum: Momentum is a parameter for the SGD optimizer that helps accelerate SGD in the relevant direction and dampens oscillations. A common value for momentum is 0.9.
+Here are some suggested hyperparameters for fine-tuning your custom model on the ImageNet dataset. The exact values may need to be adjusted based on the specific characteristics of your data and the performance of the model during training.
+
+{
+    "learning_rate": "0.001 - 0.01",
+    "batch_size": "16 - 128",
+    "num_epochs": "20 - 100",
+    "optimiser": "SGD, Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR",
+    "step_size": "5 - 30",
+    "gamma": "0.1 - 0.5",
+    "momentum": "0.9"
+}
+
+Reasoning:
+
+- "learning_rate": A learning rate in the range of 0.001 to 0.01 is common for many tasks. A smaller learning rate may lead to more accurate results but may also require more epochs to converge.
+
+- "batch_size": The batch size depends on the available memory. Smaller batch sizes can lead to more accurate models but may require more epochs to converge.
+
+- "num_epochs": The number of epochs depends on how quickly your model converges. More complex models or datasets may require more epochs.
+
+- "optimiser": SGD and Adam are commonly used optimisers. SGD is simple and effective, while Adam can sometimes achieve better results.
+
+- "loss_function": CrossEntropyLoss is a common choice for multi-class classification tasks like ImageNet.
+
+- "scheduler": StepLR is a simple learning rate scheduler that decreases the learning rate by a factor every few epochs. This can help the model converge faster.
+
+- "step_size": The step size for the learning rate scheduler depends on how quickly you want the learning rate to decrease. A smaller step size means the learning rate decreases more slowly.
+
+- "gamma": The gamma parameter for the learning rate scheduler determines how much the learning rate decreases each time. A smaller gamma means a slower decrease.
+
+- "momentum": A momentum of 0.9 is a common choice that can help the optimiser navigate the parameter space more effectively.
+Here are some suggested hyperparameters for fine-tuning your custom model on the ImageNet dataset. The exact values may need to be adjusted based on the specific characteristics of your data and the performance of the model during training.
+
+{
+    "learning_rate": "0.001 - 0.01",
+    "batch_size": "16 - 128",
+    "num_epochs": "20 - 100",
+    "optimiser": "SGD, Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR",
+    "step_size": "5 - 10",
+    "gamma": "0.1 - 0.5",
+    "momentum": "0.9"
+}
+
+Reasoning:
+
+- "learning_rate": A learning rate in the range of 0.001 to 0.01 is often a good starting point. A smaller learning rate may lead to more accurate results, but the training process will be slower.
+
+- "batch_size": The batch size depends on the available memory. A larger batch size can lead to faster training, but it may also cause the model to generalize less well.
+
+- "num_epochs": The number of epochs depends on how quickly the model converges. A larger number of epochs may lead to better results, but it will also increase the training time.
+
+- "optimiser": SGD and Adam are commonly used optimizers. SGD is simple and efficient, while Adam adapts the learning rate for each weight and is often faster.
+
+- "loss_function": CrossEntropyLoss is a common choice for multi-class classification problems like ImageNet.
+
+- "scheduler": StepLR is a learning rate scheduler that decreases the learning rate by gamma every step_size epochs. It can help to avoid overshooting the minimum of the loss function.
+
+- "step_size": The step size for the learning rate scheduler depends on how quickly the learning rate should decrease. A smaller step size means the learning rate will decrease more slowly.
+
+- "gamma": The factor by which the learning rate is decreased. A smaller gamma means the learning rate will decrease more slowly.
+
+- "momentum": Momentum helps to avoid local minima and speeds up training. A common choice is 0.9.
+Here are some suggested hyperparameters for fine-tuning your custom model on the ImageNet dataset. The exact values may need to be adjusted based on the specific characteristics of your data and the performance of the model during training.
+
+{
+    "learning_rate": "0.001 - 0.01",
+    "batch_size": "16 - 128",
+    "num_epochs": "20 - 100",
+    "optimiser": "SGD, Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR",
+    "step_size": "5 - 30",
+    "gamma": "0.1 - 0.5",
+    "momentum": "0.9"
+}
+
+Reasoning:
+
+- Learning rate: A common range for the learning rate is between 0.001 and 0.01. A smaller learning rate may lead to more accurate results, but the training process will be slower.
+
+- Batch size: The batch size depends on the available memory. A larger batch size can lead to faster training, but it may also cause the model to converge to a suboptimal solution.
+
+- Number of epochs: The number of epochs depends on how quickly the model converges. A larger number of epochs may lead to better results, but it will also increase the training time.
+
+- Optimizer: SGD and Adam are commonly used optimizers. SGD is simple and efficient, while Adam adapts the learning rate for each weight in the model, which can lead to faster convergence.
+
+- Loss function: CrossEntropyLoss is commonly used for multi-class classification problems like ImageNet.
+
+- Scheduler: StepLR is a simple learning rate scheduler that decreases the learning rate by a factor (gamma) every few epochs (step_size). This can help the model converge faster.
+
+- Step size: The step size for the learning rate scheduler depends on how quickly you want the learning rate to decrease. A smaller step size means the learning rate will decrease more frequently.
+
+- Gamma: The gamma for the learning rate scheduler is the factor by which the learning rate decreases. A smaller gamma means a slower decrease.
+
+- Momentum: Momentum is a parameter for the SGD optimizer that helps accelerate SGD in the relevant direction and dampens oscillations. A common value for momentum is 0.9.
+{
+    "learning_rate": "0.001 - 0.1",
+    "batch_size": "16 - 128",
+    "num_epochs": "10 - 100",
+    "optimiser": "SGD, Adam",
+    "loss_function": "CrossEntropyLoss",
+    "scheduler": "StepLR, ExponentialLR",
+    "step_size": "5 - 30",
+    "gamma": "0.1 - 0.9",
+    "momentum": "0.5 - 0.99"
+}
+
+Reasoning:
+
+1. "learning_rate": The learning rate is a hyperparameter that controls how much to change the model in response to the estimated error each time the model weights are updated. Choosing the learning rate is challenging as a value too small may result in a long training process that could get stuck, whereas a value too large may result in learning a sub-optimal set of weights too fast or an unstable training process.
+
+2. "batch_size": The batch size is a hyperparameter that defines the number of samples to work through before updating the internal model parameters. A smaller batch size of 16-64 might be preferable if you have limited computational resources or if you're trying to avoid overfitting. Larger batch sizes in the range of 64-128 are computationally efficient and utilize the GPU memory.
+
+3. "num_epochs": The number of epochs is a hyperparameter that defines the number times that the learning algorithm will work through the entire training dataset. The number of epochs is typically set between 10 - 100, but it really depends on the rate of convergence of the training process.
+
+4. "optimiser": SGD and Adam are popular choices for optimizers. SGD is simple and easy to implement, but sometimes it's slower to converge. Adam, on the other hand, combines the perks of two other extensions of stochastic gradient descent: AdaGrad and RMSProp.
+
+5. "loss_function": CrossEntropyLoss is a good choice for multi-class classification problems like ImageNet.
+
+6. "scheduler": Learning rate schedulers like StepLR and ExponentialLR are used to adjust the learning rate during training by reducing it according to a pre-defined schedule.
+
+7. "step_size": This is the number of epochs after which the learning rate is decreased in StepLR. A smaller step size will make the learning rate decrease faster.
+
+8. "gamma": This is the factor by which the learning rate gets multiplied at each step. It should be less than 1 to ensure the learning rate decreases over time.
+
+9. "momentum": Momentum helps accelerate SGD in the relevant direction and dampens oscillations. It does this by adding a fraction of the update vector of the past time step to the current update vector.
