@@ -1,0 +1,11 @@
+Learning Rate,Momentum,Batch Size,Num Epochs,Optimizer,Loss Function,Scheduler,Step Size,Gamma
+0.01,0.9,64,100,Adam,CrossEntropyLoss,StepLR,10,0.1
+0.01,0.9,64,30,Adam,CrossEntropyLoss,StepLR,30,0.1
+0.01,0.9,64,100,Adam,CrossEntropyLoss,StepLR,30,0.1
+0.01,,64,100,Adam,CrossEntropyLoss,StepLR,100,0.1
+0.01,0.9,64,50,,CrossEntropyLoss,StepLR,10,0.1
+0.01,0.9,64,50,,CrossEntropyLoss,StepLR,10,0.1
+0.01,0.9,64,100,,CrossEntropyLoss,StepLR,30,0.1
+0.01,0.9,64,100,Adam,CrossEntropyLoss,StepLR,10,0.1
+0.01,0.9,256,100,Adam,CrossEntropyLoss,StepLR,30,0.1
+0.01,0.9,64,100,Adam,CrossEntropyLoss,StepLR,30,0.1
